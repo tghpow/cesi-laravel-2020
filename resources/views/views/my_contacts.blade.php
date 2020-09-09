@@ -10,15 +10,15 @@
         <div class="row">
             @foreach($contacts as $contact)
                 <div class="col-12 contact">
-                    <h2>{{ $contact['subject'] }}</h2>
+                    <h2>{{ $contact->subject }}</h2>
                     <div>
-                        {{ $contact['message'] }}
+                        {{ $contact->message }}
                     </div>
                 </div>
                 <hr>
             @endforeach
 
-            @if($contacts->length() == 0)
+            @if($contacts->count() == 0)
                 <p>
                     <a href="{{ route('contact.get') }}">
                         Pas encore de contact ? Contactez nous ici:

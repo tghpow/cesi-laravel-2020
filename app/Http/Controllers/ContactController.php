@@ -58,7 +58,7 @@ class ContactController extends Controller
 
     public function myContacts(Request $request)
     {
-        $contacts = DB::table('contacts')->where('user_id', '=', Auth::user()->id)->get();
+        $contacts = \DB::table('contacts')->where('user_id', '=', Auth::user()->id)->get();
 
         return view('views.my_contacts')->with([
             'contacts' => $contacts
