@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/posts', 'PostControlle@all')->name('post.all');
+Route::get('/posts', 'PostController@all')->name('post.all');
 Route::get('/post/{id}', 'PostController@get')->name('post.get');
 Route::post('/post', 'PostController@store')->name('post.store');
 Route::put('/post/{id}', 'PostController@update')->name('post.update');
