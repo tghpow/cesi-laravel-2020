@@ -25,6 +25,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/posts', 'PostController@all')->name('post.all');
 Route::get('/post/{id}', 'PostController@get')->name('post.get');
+Route::get('/form-post/{id?}', 'PostController@form')->name('post.form');
 Route::post('/post', 'PostController@store')->name('post.store');
 Route::put('/post/{id}', 'PostController@update')->name('post.update');
 Route::delete('/post/{id}', 'PostController@delete')->name('post.delete');
