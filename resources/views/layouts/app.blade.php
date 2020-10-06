@@ -42,6 +42,9 @@
                             <a class="nav-link" href="{{ route('post.all') }}">Mes posts</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('comment.my') }}">Mes commentaires</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact.my_contacts') }}">Mes contacts</a>
                         </li>
                         <li class="nav-item">

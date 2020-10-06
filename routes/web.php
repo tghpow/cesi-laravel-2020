@@ -23,6 +23,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('post/{id}/comment', 'CommentController@store')->name('comment.store');
+Route::get('mes-commentaires', 'CommentController@myComments')->name('comment.my');
+
 Route::get('/posts', 'PostController@all')->name('post.all');
 Route::get('/post/{id}', 'PostController@get')->name('post.get');
 Route::get('/form-post/{id?}', 'PostController@form')->name('post.form');
