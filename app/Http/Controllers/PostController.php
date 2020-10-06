@@ -22,8 +22,8 @@ class PostController extends Controller
     {
         $is_creating = $post_id === null;
 
-        $post = !$is_creating ? Post::findOrFail($post_id) : new Post();
-        $action = !$is_creating ? route('post.create') : route('post.update', [$post_id]);
+        $post = $is_creating  ? new Post() : Post::findOrFail($post_id);
+        $action = $is_creating ? route('post.store') : route('post.update', [$post_id]);
 
         return view('views.post.form')->with([
             'post' => $post,
